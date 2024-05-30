@@ -69,14 +69,16 @@ section{
     text-align: center;
 }
 
-form .input-box .input input:focus ~ label{
+form .input-box .input input:focus ~ label,
+form .input-box .input input:valid ~ label{
     margin-top: -20px;
     font-size: 10px;
     margin-left: -6px;
     transition: 1s;
 }
 
-textarea:focus ~ label{
+textarea:focus ~ label,
+textarea:valid ~ label{
     margin-top: -20px;
     font-size: 12px;
     transition: 1s;
@@ -92,24 +94,24 @@ textarea:focus ~ label{
 
 .button input{
     margin: auto;
-    background-color: #008000;
-    box-shadow: 0 0px 3px #01d201;
+    background-color: green;
+    box-shadow: 0 0px 3px #aaaaaa;
     border: none;
     color: white;
-    width: 150px;
+    width: 200px;
     height: 40px;
     font-weight: 100;
-    font-size: 16px;
+    font-size: 14px;
     border-radius: 0px;
     margin-top: 5px;
     cursor: pointer;
     transition: 1s;
+    border-radius: 2px;
 }
 
 .button input:hover{
     background-color: #175f17;
     transition: 1s;
-    font-size: 17px;
 }
 
 @media (max-width:800px) {
@@ -123,6 +125,15 @@ textarea:focus ~ label{
 }
 
 @media (max-width:600px) {
+
+    input, select{
+        height: 35px;
+        padding: 5px;
+    }
+
+    .criarorcamento h1{
+        font-size: 18px;
+    }
     .criarorcamento form .input-box{
         /* border: 2px solid orange; */
         gap: 5px;
@@ -133,6 +144,6 @@ textarea:focus ~ label{
     }
 
     .criarorcamento{
-        min-width: 350px;
+        min-width: 400px;
     }
 }
