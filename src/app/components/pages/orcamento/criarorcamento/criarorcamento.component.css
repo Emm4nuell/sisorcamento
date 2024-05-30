@@ -1,0 +1,138 @@
+.criarorcamento{
+    width: 100%;
+    /* display: inline; */
+}
+
+.criarorcamento h1{
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    font-weight: 100;
+    background-color: #2d2d2d;
+    font-size: 14px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.criarorcamento form .input-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.criarorcamento form .input-box .input{
+    position: relative;
+    width: 100%;
+}
+
+.criarorcamento form .input label{
+    color: #b0b0b0;
+    font-size: 12px;
+    position: absolute;
+    left: 3px;
+    padding-left: 5px;
+    top: 6px;
+    transition: 1s;
+}
+
+input[type="text"], input[type="date"] , input[type="checkbox"] , select, textarea{
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    height: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-left: 2px;
+    color: #b0b0b0;
+    font-size: 16px;
+    height: 25px;
+}
+
+input[type="checkbox"]{
+    width: 150px;
+    border: 2px solid red;
+}
+
+textarea{
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 150px;}
+
+input[type="checkbox"]{
+    box-shadow: none;
+}
+
+section{
+    border: 2px solid red;
+    text-align: center;
+}
+
+form .input-box .input input:focus ~ label{
+    margin-top: -20px;
+    font-size: 10px;
+    margin-left: -6px;
+    transition: 1s;
+}
+
+textarea:focus ~ label{
+    margin-top: -20px;
+    font-size: 12px;
+    transition: 1s;
+}
+
+.criarorcamento form .input-box .codigo{
+    width: 20%;
+}
+
+.criarorcamento form .input-box .input-check{
+    display: flex;
+}
+
+.button input{
+    margin: auto;
+    background-color: #008000;
+    box-shadow: 0 0px 3px #01d201;
+    border: none;
+    color: white;
+    width: 150px;
+    height: 40px;
+    font-weight: 100;
+    font-size: 16px;
+    border-radius: 0px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.button input:hover{
+    background-color: #175f17;
+    transition: 1s;
+    font-size: 17px;
+}
+
+@media (max-width:800px) {
+    .criarorcamento form .input-box{
+        /* border: 2px solid red; */
+        gap: 1rem;
+    }
+    .button{
+        text-align: center;
+    }
+}
+
+@media (max-width:600px) {
+    .criarorcamento form .input-box{
+        /* border: 2px solid orange; */
+        gap: 5px;
+    }
+
+    .criarorcamento form .input-box .codigo{
+        width: 100%;
+    }
+
+    .criarorcamento{
+        min-width: 350px;
+    }
+}
